@@ -52,7 +52,7 @@ module.exports = (course, stepCallback) => {
                 'Quiz': $('assessment').get(0).attribs.title,
                 'Quiz Point Value': quizValue === undefined ? 'None' : quizValue,
                 'Grade Item Value': gradeValue === '' ? 'None' : gradeValue,
-                'Reason': ''
+                'Reason': reason
             });
         }
     });
