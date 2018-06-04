@@ -48,7 +48,7 @@ module.exports = (course, stepCallback) => {
         }
 
         if (reason !== '') {
-            course.log('Quiz Value has Changed', {
+            course.log('Quiz Value Different in Canvas vs. D2L', {
                 'Quiz': $('assessment').get(0).attribs.title,
                 'Quiz Point Value': quizValue === undefined ? 'None' : quizValue,
                 'Grade Item Value': gradeValue === '' ? 'None' : gradeValue,
