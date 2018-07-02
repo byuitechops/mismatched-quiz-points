@@ -15,6 +15,12 @@ module.exports = (course, stepCallback) => {
 
     let grades = course.content.find(item => item.name === 'grades_d2l.xml');
 
+    if (quizFiles === undefined || grades === undefined) {
+        course.warning('Unable to get quiz files OR grades file');
+        stepCallback(null, course);
+        return;
+    }
+
     quizFiles.forEach(quizFile => {
         // Quiz File
         let $ = quizFile.dom;
